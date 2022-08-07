@@ -1,0 +1,99 @@
+
+<html>
+<head>
+	
+
+   
+       
+<body>
+        </div>
+<form name="form"  method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
+        
+                <center>
+    <h2>Booking Form</h2>
+  <?php
+               
+$con = mysqli_connect("localhost","root","","cruise_database");
+$sql="select * from tbl_cruise";
+$result=mysqli_query($con,$sql);
+               
+                
+?>
+
+        Select Cruise<select name="cruise_type">
+             <?php
+             if (mysqli_num_rows($result) > 0) {
+while($row = mysqli_fetch_assoc($result)) {
+              $s1= $row["cruisename"];
+              echo"<option>".$s1."</option>";
+          }
+      }
+            ?>
+        
+
+        </select>
+        <input type="submit" value="submit">
+    </br>    
+</form>
+<form name="book_cruise" action="UpdateCruiseSave.php" method="post">
+    <table border="1">
+<?php
+ $s1="";
+ $cprice=0;
+ $cperson=0;
+ $cid=0;
+$con = mysqli_connect("localhost","root","","cruise_database");
+$cname=$_POST['cruise_type'];
+$_SESSION["name"]=$cname;
+
+$sql="select * from tbl_cruise where cruisename ='$cname'";
+$result=mysqli_query($con,$sql);
+if (mysqli_num_rows($result) > 0) {
+while($row = mysqli_fetch_assoc($result)) {
+                $img=$row["cruiseid"];
+$cid=$img;
+			  $s1= $row["cruisename"];
+              $s3=$row["cruise_arrival"];
+			  $s4=$row["cruise_dest"];
+			  $s5=$row["cruise_date"];
+			  $s6=$row["cruise_duration"];
+			  $cprice=$row["cruise_total"];
+              $cperson=$row["cruise_other"];        
+              	
+?>
+<tr><td>Cruise Name<td><input type="text" name="cname" id="t1" value="<?php echo $s1 ?>"></td>
+<td>
+<?php 
+
+$imgname="".$img.".jpg";
+
+?>
+
+</td><td rowspan=9><img src=images/<?php echo $imgname; ?> width=400 height=400></td></tr>
+<tr><td>cruise ID</td><td><input type="text" name="t1" id="t1" value="<?php echo $cid ?>"></td></tr>
+<tr><td>cruise_arrival</td><td><input type="text" name="t2" id="t2" value="<?php echo $s3 ?>"></td></tr>
+<tr><td>cruise_destination</td><td><input type="text" name="t3" id="t2" value="<?php echo $s4 ?>"></td></tr>
+<tr><td>cruise_date</td><td><input type="text" name="t4" id="t2" value="<?php echo $s5 ?>"></td></tr>
+<tr><td>cruise_duration</td><td><input type="text" name="t5" id="t2" value="<?php echo $s6 ?>"></td></tr>";
+<tr><td>Total Amount</td><td><input type="text" name="t6" id="t7" value="<?php echo $cprice ?>"></td></td></tr>
+<tr><td>Total Seats</td><td><input type="text" name="t7" value="<?php echo $cperson ?>">
+</td>
+</tr>
+
+
+<?php
+    }
+}
+
+?>
+
+<tr><td><input type="submit" id="btn" value="Update Cruise"></td>
+<td> <input type="reset" id="btn" name="Clear"></td></tr>
+<br>
+
+
+</table>
+</center>
+</form>
+</div>
+</body>

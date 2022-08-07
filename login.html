@@ -1,0 +1,206 @@
+<head>
+        <style>
+                body {
+                    font-family: sans-serif;
+                  background-image: url(images/1.jpg);
+				  background-position: center;
+                    background-size: cover;
+                    align-items: center;
+                }
+        
+                form {
+                    padding-top: 50px;
+                }
+        
+                table {
+                    background: rgba(0, 0, 0, 0.548);
+                    color: white;
+                    padding: 30px;
+                    border: none;
+                    position: relative;
+                    justify-content: center;
+                    font-size: 25px;
+        
+                }
+        
+                h2 {
+                    color: white;
+                    font-size: xx-large;
+                    text-decoration: underline;
+                    text-transform: uppercase;
+                }
+        
+                tr,
+                td {
+                    border: none;
+                    padding: 10px;
+                    padding-bottom: 15px;
+                }
+        
+                input[type="text"] {
+                    border-radius: 5px;
+                    border: none;
+                    height: 30px;
+                    width: 300px;
+                    font-size: 20px;
+        
+                }
+        
+                input[type=text]:focus {
+                    background-color: rgba(252, 249, 61, 0.788);
+                }
+        
+                input[type="number"] {
+                    border-radius: 5px;
+                    border: none;
+                    height: 30px;
+                    width: 300px;
+                    font-size: 20px;
+        
+                }
+        
+                input[type=number]:focus {
+                    background-color: rgba(252, 249, 61, 0.788);
+                }
+                input[type="password"] {
+                    border-radius: 5px;
+                    border: none;
+                    height: 30px;
+                    width: 300px;
+                    font-size: 20px;
+        
+                }
+        
+                input[type=password]:focus {
+                    background-color: rgba(252, 249, 61, 0.788);
+                }
+        
+                input[type="date"] {
+                    border-radius: 5px;
+                    border: none;
+                    height: 30px;
+                    width: 300px;
+                    font-size: 20px;
+        
+                }
+        
+                input[type=date]:focus {
+                    background-color: rgba(252, 249, 61, 0.788);
+                }
+                select{
+                        border-radius: 5px;
+                    border: none;
+                    height: 30px;
+                    width: 300px;
+                    font-size: 20px;
+                }
+               
+                #btn {
+                    /* height: 40px; */
+                    font-weight: 400;
+                    text-align: center;
+                    border: 1px solid transparent;
+                    padding: .375rem .75rem;
+                    font-size: 1rem;
+                    line-height: 1.5;
+                    border-radius: .25rem;
+                    background-color: #007bff;
+                    color: #fff;
+                    transition: 0.8s;
+                    width: 100%;
+                }
+        
+                #btn:hover {
+                    background-color: #fff;
+                    color: #007bff;
+                }
+        
+                samp {
+                    color: red;
+                }
+            </style>
+            <script>
+                function check() {
+        
+                    var username = document.frmlogin.username.value;
+                    var password = document.frmlogin.password.value;
+                    
+        
+                    // var no_adult = document.f1.no_adult.value;
+                    // var no_child = document.f1.no_child.value;
+        
+                    // var Aadhar_Number = document.f1.Aadhar_Number.value;
+                    // var pin_code = document.f1.pin_code.value;
+        
+        
+        
+                    // alert('Opps you forgot your First Name');
+        
+        
+                    // Personal Details
+                    if (username.length == 0)
+                        alert('Opps you forgot your User Name');
+                        else if (username == 'shiv')
+                        alert('User Name Invalid');
+                        else  if (username == 'giri')
+                        alert('User Name Invalid');
+                        else  if (username == '123')
+                        alert('User Name Invalid');
+
+
+                    else if (!isNaN(username))
+                        alert('cant put number as a User name');
+        
+        
+                    else if (password.length == 0)
+                        alert('Opps you forgot Password');
+                        else if (password == '123')
+                        alert('Invalid Password');
+        
+        
+        
+        
+                    //last (run)
+                    else {
+                       
+                        
+                        document.frmlogin.action = "check_login.php";
+                        document.frmlogin.submit();
+        
+                    }
+        
+                }
+        
+            </script>
+</head>       
+       <body>
+       <center>
+<!-- action="check_login.php" -->
+<form name="frmlogin"  method="post">
+ <center>
+	<font color="white">
+					<a href="index.html"><font color="white">Home</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="enquiry.html"><font color="white">Enquiry</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="registration.html"><font color="white">Registration</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="login.html"><font color="white">Login</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="Contact-us.html"><font color="white">contact us</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					</font>
+							
+	<h2>Login Details</h2>
+<table border="1">
+<tr><td><samp>*</samp>Enter username</td><td><input type="text" id="username" name="uname"></td></tr>
+
+<tr><td><samp>*</samp>Enter password</td><td><input type="password" id="password" name="upass"></td></tr>
+<tr><td><samp>*</samp>user</td><td><select name="utype">
+<option>Customer</option>
+
+<option>Admin</option>
+</select>
+</td></tr>
+<tr><td><input type="submit" id="btn" value="Submit" onclick="check()"></td><td>
+<input type="reset" id="btn" name="Clear"></td></tr>
+</table>
+<a href="registration.html">New User</a>
+</form>
+</center>
+ 

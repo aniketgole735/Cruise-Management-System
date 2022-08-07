@@ -1,0 +1,134 @@
+    <?php
+if (isset($_POST['submit']))
+{
+    if((!isset($_POST['cruise_type'])))
+        {
+        $error = "*" . "Please fill all the required fields";
+    }
+    else
+    {
+          $firstname = $_POST['firstname'];
+    }
+}
+?>
+<html>
+<head>
+	
+<body>
+
+<form name="form"  method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
+        
+
+                <center>
+    <h2>Booking Form</h2>
+	Welcome User
+		<?php
+		session_start();
+		$sname=$_SESSION["uname"];
+		echo"$sname";
+		$_SESSION["uname"]=$sname;
+		?>
+         <?php
+                if (isset($_POST['submit']))
+                {
+                    if (isset($error))
+                    {
+                        echo "<p style='color:red;'>" 
+                        . $error . "</p>";
+                    }
+                }
+               
+$con = mysqli_connect("localhost","root","","cruise_database");
+$sql="select * from tbl_cruise";
+$result=mysqli_query($con,$sql);
+
+                 
+                
+?>
+
+        Select Cruise<select name="cruise_type">
+             <?php
+             if (mysqli_num_rows($result) > 0) {
+while($row = mysqli_fetch_assoc($result)) {
+              $s1= $row["cruisename"];
+              echo"<option>".$s1."</option>";
+          }
+      }
+            ?>
+        
+
+        </select>
+        <input type="submit" value="submit">
+    </br>    
+</form>
+<form name="book_cruise" action="Addbooking.php" method="post">
+    <table border="1">
+<?php
+ $s1="";
+ $cprice=0;
+ $cperson=0;
+$con = mysqli_connect("localhost","root","","cruise_database");
+$cname=$_POST['cruise_type'];
+$_SESSION["name"]=$cname;
+
+$sql="select * from tbl_cruise where cruisename ='$cname'";
+$result=mysqli_query($con,$sql);
+if (mysqli_num_rows($result) > 0) {
+while($row = mysqli_fetch_assoc($result)) {
+              $img=$row["cruise_id"];
+			  $s1= $row["cruisename"];
+              $s3=$row["cruise_arrival"];
+			  $s4=$row["cruise_dest"];
+			  $s5=$row["cruise_date"];
+			  $s6=$row["cruise_duration"];
+			  $cprice=$row["cruise_total"];
+              $cperson=$row["cruise_other"];        
+              	
+?>
+<tr><td>Cruise Name</td>
+<td>
+<?php 
+Echo"$s1";
+$imgname="".$img.".jpg";
+$_SESSION["cname"]=$s1;
+?>
+</td><td rowspan=11><img src=images/<?php echo $imgname; ?> width=400 height=400></td></tr>"
+<?php 
+
+echo"<tr><td>cruise_arrival</td><td>".$s3."</td></tr>";
+echo"<tr><td>cruise_destination</td><td>".$s4."</td></tr>";
+echo"<tr><td>cruise_date</td><td>".$s5."</td></tr>";
+echo"<td>cruise_duration</td><td>".$s6."</td></tr>";
+?>
+<tr><td>Total Amount</td><td>
+<input type="text" name="t1" id="t7" value="<?php echo $cprice ?>"></td></td></tr>
+<tr><td>Total Seats</td><td><input type="text" name="t2" value="<?php echo $cperson ?>">
+</td>
+</tr>
+
+
+<?php
+    }
+}
+$sum=0;
+$sql="select * from tbl_booking where cruise_name ='$cname'";
+$result=mysqli_query($con,$sql);
+if (mysqli_num_rows($result) > 0) {
+    while($row = mysqli_fetch_assoc($result)) {
+
+$sum=$sum+$row['nperson'];
+}
+?>
+<tr><td>No of Booked Seats</td><td><input type="text" name="bseat" value="
+<?php echo $sum; ?>"></td></tr>
+<?php 
+}
+$available=$cperson-$sum;
+?>
+<tr><td>No of Available Seats</td><td><input type="text" name="aseat" value="<?php echo $available; ?>"></td></tr>
+
+
+</table>
+</center>
+</form>
+</body>

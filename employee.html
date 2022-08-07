@@ -1,0 +1,259 @@
+<html>
+
+<head>
+    <style>
+        body {
+            font-family: sans-serif;
+            background-image: url(img/1.jpg);
+            background-position: center;
+            background-size: cover;
+            align-items: center;
+        }
+
+        form {
+            padding-top: 50px;
+        }
+
+        table {
+            background: rgba(0, 0, 0, 0.548);
+            color: white;
+            padding: 30px 30px 0px 30px;
+            border: none;
+            position: relative;
+            justify-content: center;
+            font-size: 25px;
+
+        }
+
+        h2 {
+            color: white;
+            font-size: xx-large;
+            text-decoration: underline;
+            text-transform: uppercase;
+        }
+
+        tr,
+        td {
+            border: none;
+            padding: 10px;
+            padding-bottom: 15px;
+        }
+
+        input[type="text"] {
+            border-radius: 5px;
+            border: none;
+            height: 30px;
+            width: 300px;
+            font-size: 20px;
+
+        }
+
+        input[type=text]:focus {
+            background-color: rgba(252, 249, 61, 0.788);
+        }
+
+        input[type="password"] {
+            border-radius: 5px;
+            border: none;
+            height: 30px;
+            width: 300px;
+            font-size: 20px;
+
+        }
+
+        input[type=password]:focus {
+            background-color: rgba(252, 249, 61, 0.788);
+        }
+
+        input[type="email"] {
+            border-radius: 5px;
+            border: none;
+            height: 30px;
+            width: 300px;
+            font-size: 20px;
+
+        }
+
+        input[type=email]:focus {
+            background-color: rgba(252, 249, 61, 0.788);
+        }
+
+        input[type="date"] {
+            border-radius: 5px;
+            border: none;
+            height: 30px;
+            width: 300px;
+            font-size: 20px;
+
+        }
+
+        input[type=date]:focus {
+            background-color: rgba(252, 249, 61, 0.788);
+        }
+
+        #btn {
+            /* height: 40px; */
+            font-weight: 400;
+            text-align: center;
+            border: 1px solid transparent;
+            padding: .375rem .75rem;
+            font-size: 1rem;
+            line-height: 1.5;
+            border-radius: .25rem;
+            background-color: #007bff;
+            color: #fff;
+            transition: 0.8s;
+            width: 100%;
+        }
+
+        #btn:hover {
+            background-color: #fff;
+            color: #007bff;
+        }
+
+        select {
+            border-radius: 5px;
+            height: 30px;
+            width: 300px;
+        }
+
+        .new-user {
+            text-decoration: none;
+            color: red;
+            font-size: x-large;
+            background-color: rgba(0, 0, 0, 0.548);
+            padding: 0px 238.5px;
+            padding-bottom: 10px;
+            border-top: 1px solid white;
+            transition: 1s;
+        }
+
+        .new-user:hover {
+            color: white;
+            font-size: x-large;
+            background-color: rgba(0, 0, 0, 0.548);
+            padding: 0px 238px;
+            padding-bottom: 10px;
+
+        }
+
+        samp {
+            color: red;
+        }
+    </style>
+    <script>
+        function check() {
+            var employee_name = document.employee.employee_name.value;
+            var Joining_date = document.employee.Joining_date.value;
+            var contact_no = document.employee.contact_no.value;
+            var email_id = document.employee.email_id.value;
+            var address = document.employee.address.value;
+
+            var Designation = document.employee.Designation.value;
+            var Salary = document.employee.Salary.value;
+
+
+
+
+            // var no_adult = document.f1.no_adult.value;
+            // var no_child = document.f1.no_child.value;
+
+            // var Aadhar_Number = document.f1.Aadhar_Number.value;
+            // var pin_code = document.f1.pin_code.value;
+
+
+
+            // alert('Opps you forgot your First Name');
+
+
+            // Personal Details
+            if (employee_name.length == 0)
+                alert('Opps you forgot your Name');
+            else if (!isNaN(employee_name))
+                alert('cant put number as a name');
+
+
+            else if (Joining_date.length == 0)
+                alert('Opps you forgot date');
+
+            else if (contact_no.length == 0)
+                alert('Opps you forgot contact number');
+            else if (isNaN(contact_no))
+                alert('Invalid contact number');
+            else if (contact_no <= 7000000000)
+                alert('Opps you Enter Invalid Phone Number');
+
+            else if (email_id.length == 0)
+                alert('Opps you forgot email');
+            else if (address.length == 0)
+                alert('Opps you forgot Address');
+            else if (Designation.length == 0)
+                alert('Opps you forgot Designation');
+
+
+
+
+
+            //  // // gardian detailss
+
+
+
+
+            //last (run)
+            else {
+                alert('All Validation verified');
+                document.employee.action = "employee.php";
+                document.employee.submit();
+
+            }
+
+        }
+
+    </script>
+</head>
+
+<body>
+    <!-- action="employee.php -->
+    <form name="employee" method="post">
+        <center>
+            <h2>Employee Form</h2>
+            <table border="1">
+                <tr>
+                    <td>Enter Employee Name</td>
+                    <td><input type="text" name="t1" id="employee_name"></td>
+                </tr>
+                <tr>
+                    <td>Joining Date</td>
+                    <td><input type="date" name="t2" id="Joining_date"></td>
+                </tr>
+                <tr>
+                    <td>Contact No</td>
+                    <td><input type="text" name="t3" id="contact_no" maxlength="10"></td>
+                </tr>
+                <tr>
+                    <td>Enter Email</td>
+                    <td><input type="email" name="t4" id="email_id" required></td>
+                </tr>
+                <tr>
+                    <td>Enter Address</td>
+                    <td><input type="text" name="t5" id="address"></td>
+                </tr>
+                <tr>
+                    <td>Designation</td>
+                    <td><input type="text" name="t6" id="Designation"></td>
+                </tr>
+                <tr>
+                    <td>Basic Salary</td>
+                    <td><input type="text" name="t7" id="Salary" readonly placeholder="35,000"></td>
+                </tr>
+
+                <tr>
+                    <td><input type="submit" id="btn" value="Submit" onclick="check()"></td>
+                    <td>
+                        <input type="reset" id="btn" name="Clear">
+                    </td>
+                </tr>
+            </table>
+        </center>
+    </form>
+</body>

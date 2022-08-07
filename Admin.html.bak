@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style/Admin_profile.css">
+    <title>Admin profile</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="main">
+            <div class="topbar">
+                <a href="CruiseSeatReport.php"> Show CruiseWise Seat Details</a>
+                <a href="Cruise.html">Add New Cruise</a>
+                <a href="ShowCancellation.php"> Show Cancellation</a>
+                <a href="Accomodation.html">Add Accomodation</a>
+            </div>
+            <div class="row">
+                <div class="col-md-3 mt-1">
+                    <div class="card text-center sidebar">
+                        <div class="card-body">
+                            <img src="img/avatar.jpg" alt="" width="150px">
+                            <div class="mt-3">
+                                <!-- <h3>Burk Machad</h3> -->
+                            </div>
+                            <a href="Reports.html"> REPORTS</a>
+                              <a href="login.html">LogOut</a>
+                            <a href="ShowCruise.php"> Show Cruise/Plan</a>
+                            <!-- <a href="">SignOut</a> -->
+
+
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-9 mt-1">
+<img src="img/Admin1.jpg" alt="" style="height: 550px; width:100% ;">
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

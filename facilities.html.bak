@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>facilities </title>
+    <!-- !shortcut icon  -->
+    <!-- <link rel="shortcut icon" href="img/FA/favicon.png"> -->
+    <link rel="shortcut icon" href="img/FA/new.jpg">
+    <!-- ? G-FONT -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet">
+
+
+    <link href="style/facilities.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <!-- <div class="container">
+    
+        <div class="navbar">
+            <img src="/img/avatar.png" alt="" class="logo">
+            <nav class="nav1">
+                <ul>
+                    <li class="active"><a href="#">HOME</a></li>
+                    <li><a href="#">region</a></li>
+                    <li><a href="#">about</a></li>
+                    <li><a href="#">HOME</a></li>
+    
+    
+                </ul>
+            </nav>
+            <img src="/img/avatar.png" alt="" class="menu-icon">
+    
+        </div>
+    
+    </div> -->
+    <div class="container2">
+        <br>
+        <div class="navbar">
+            <img src="img/logo2.png" alt="" class="logo">
+            <nav class="nav1">
+                <ul>
+                    <li class="active"><a href="myact.php">HOME</a>
+                        <div class="sub-menu-1">
+                            <!-- <ul>
+
+
+                                <li> <a href="#">sub1 </a></li><br><br>
+                                <li> <a href="#">sub2 </a></li><br><br>
+                                <li> <a href="#">sub3</a></li>
+
+
+                            </ul> -->
+
+                        </div>
+                    </li>
+                    <li><a href="booking.php">Book Cruice</a>
+                        <div class="sub-menu-1">
+                           
+                        </div>
+
+                    </li>
+                    <li><a href="ViewCruise.php">View Cruise</a></li>
+                    <li><a href="ViewHotel.php">View Accomodation</a></li>
+                    <li><a href="Cancellation.php">Cruise cancel Form</a></li>
+                 
+        
+                </ul>
+            </nav><a href="login.html">
+                <img src="img/logout.png" alt="" class="menu-icon"></a>
+
+        </div>
+        <header>
+            <br>
+            <h1><samp>facilities</samp> we provide</h1>
+            <br>
+        </header>
+        <div class="container">
+            <section class="card">
+
+                <img src="img/casino2.jpg" alt="">
+                <div>
+                    <h3>Casino.</h3>
+                    <p>Lying on the 8th Deck, the private Casino of blue Delta Cruise, 
+                        Player’s Casino offers the guests the chance to indulge in a plethora of popular games, 
+                        such as Slot Machine Games, Casino War, Poker, and Blackjack.
+                    </p>
+                    <a href="booking.php" class="btn">book now</a>
+                </div>
+            </section>
+            <section class="card">
+                <img src="img/pub.jpg" alt="">
+                <div>
+                    <h3>Bar.</h3>
+                    <p>An alluring drink in hand and the endless blue expanse to weave magic! 
+                        Welcome to Goaf an impeccable on-deck bar experience. 
+                        'Goaf' means a sailor's knot and is also a famous Goan folk dance. 
+                        Witness infinite sea magic at the Goaf Bar, as it is located right on the infinity pool deck!
+
+
+                    </p>
+                    <a href="booking.php" class="btn">Book Now</a>
+                </div>
+            </section>
+            <section class="card">
+                <img src="img/spa.jpg" alt="">
+                <div>
+                    <h3>Spa.</h3>
+                    <p>As the soothing breeze lulls you into its charm and the rippling waters have you in a trance, pamper your mind, body, and soul on Blue Delta! 
+                        We have complete relaxation planned for you on-board and at our "Dry Dock Spa" managed by Sohum Wellness to ensure you feel the wonder of rejuvenation.
+                    </p>
+                    <a href="booking.php" class="btn">Book now</a>
+                </div>
+            </section>
+            
+            <section class="card">
+                <img src="img/rest.jpg" alt="">
+                <div>
+                    <h3>Resturant.</h3>
+                    <p>A blissful voyage begins when you fall for the sea’s charm…and that comes true at Ancora! 
+                        This enchanting place combines great food with an alluring view of the sea. Enjoy breakfast, dinner, and refresh at our 24-hour coffee shop.
+                         A huge real-life anchor rests in the front and adds grandeur to the restaurant's ambience.
+
+                    </p>
+                    <a href="booking.php" class="btn">Book now</a>
+                </div>
+            </section>
+
+
+        </div>
+    </div>
+</body>
+
+</html>

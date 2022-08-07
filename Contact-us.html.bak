@@ -1,0 +1,212 @@
+<html>
+
+<head>
+    <style>
+        body {
+            font-family: sans-serif;
+    background-image: url(images/1.jpg);
+	background-position: center;
+            background-size: cover;
+            align-items: center;
+        }
+
+        form {
+            padding-top: 50px;
+        }
+
+        table {
+            background: rgba(0, 0, 0, 0.548);
+            color: white;
+            padding: 30px 30px 0px 30px;
+            border: none;
+            position: relative;
+            justify-content: center;
+            font-size: 25px;
+
+        }
+
+        h2 {
+            color: white;
+            font-size: xx-large;
+            text-decoration: underline;
+            text-transform: uppercase;
+        }
+
+        tr,
+        td {
+            border: none;
+            padding: 10px;
+            padding-bottom: 15px;
+        }
+
+        input[type="text"] {
+            border-radius: 5px;
+            border: none;
+            height: 30px;
+            width: 300px;
+            font-size: 20px;
+
+        }
+
+        input[type=text]:focus {
+            background-color: rgba(252, 249, 61, 0.788);
+        }
+
+        input[type="password"] {
+            border-radius: 5px;
+            border: none;
+            height: 30px;
+            width: 300px;
+            font-size: 20px;
+
+        }
+
+        input[type=password]:focus {
+            background-color: rgba(252, 249, 61, 0.788);
+        }
+
+        input[type="email"] {
+            border-radius: 5px;
+            border: none;
+            height: 30px;
+            width: 300px;
+            font-size: 20px;
+
+        }
+
+        input[type=email]:focus {
+            background-color: rgba(252, 249, 61, 0.788);
+        }
+
+        #btn {
+            /* height: 40px; */
+            font-weight: 400;
+            text-align: center;
+            border: 1px solid transparent;
+            padding: .375rem .75rem;
+            font-size: 1rem;
+            line-height: 1.5;
+            border-radius: .25rem;
+            background-color: #007bff;
+            color: #fff;
+            transition: 0.8s;
+            width: 100%;
+        }
+
+        #btn:hover {
+            background-color: #fff;
+            color: #007bff;
+        }
+
+        select {
+            border-radius: 5px;
+            height: 30px;
+            width: 300px;
+        }
+
+        .new-user {
+            text-decoration: none;
+            color: red;
+            font-size: x-large;
+            background-color: rgba(0, 0, 0, 0.548);
+            padding: 0px 238.5px;
+            padding-bottom: 10px;
+            border-top: 1px solid white;
+            transition: 1s;
+        }
+
+        .new-user:hover {
+            color: white;
+            font-size: x-large;
+            background-color: rgba(0, 0, 0, 0.548);
+            padding: 0px 238px;
+            padding-bottom: 10px;
+
+        }
+
+        samp {
+            color: red;
+        }
+    </style>
+	<body>
+      <form name="frmlogin"  method="post">
+ <center>
+	<font color="white">
+					<a href="index.html"><font color="white">Home</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="enquiry.html"><font color="white">Enquiry</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="registration.html"><font color="white">Registration</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="login.html"><font color="white">Login</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="Contact-us.html"><font color="white">contact us</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					</font>          <h2>Contact Us</h2><br>
+                <p>Contact Information & Customer Service
+				</p> 
+                <p>We'd love to hear from you.Send us a message and w'll respond as soon as possible.
+				</p>				
+            </div>
+            <div class="container">
+                <div class="contactInfo">
+                    <div class="box">
+                        <div class="icon"><i class="fa fa-map-marker" aria-hidden="true"></i></div>
+                        <div class="text">
+                            <h3>Address</h3><br>
+                            <p>Domestic Cruise Terminal ,Victoria Docks 15,<br>
+                               White Gate,Opp.Bombay Cafe Restaurant,<br>
+                               Mumbai,-400009 Maharashtra, India.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="icon"><i class="fa fa-phone" aria-hidden="true"></i>
+                        </div>
+                        <div class="text">
+                            <h3>Phone Number</h3><br>
+                            <p>+91 8605303806
+                            </p>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="icon"><i class="fa fa-envelope-o" aria-hidden="true"></i>
+                        </div>
+                        <div class="text">
+                            <h3>Email</h3><br>
+                            <p>bluedeltacruises@gmail.com
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contactForm">
+                    <form action="">
+                        <h2>Send Message</h2>
+                        <div class="inputbox">
+                            <input type="text" name="" required="required">
+                            <span>Full Name</span>
+                        </div>
+                        <div class="inputbox">
+                            <input type="text" name="" required="required">
+                            <span>Email</span>
+                        </div>
+                        <div class="inputbox">
+                            <textarea name="" id="" required="required"></textarea>
+                            <span>Type your message.....</span>
+                        </div>
+                        <div class="inputbox">
+
+                            <input type="submit" value="Send">
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+
+        </section>
+
+        <!-- ?container ENDs -->
+    </div>
+
+
+
+
+    <script type="text/javascript" src="js/room.js"></script>
+</body>
+
+</html>

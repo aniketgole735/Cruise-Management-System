@@ -1,0 +1,27 @@
+<body>
+<h1>Show Enquiry</h1>
+<?php
+$con = mysqli_connect("localhost","root","","cruise_database");
+$sql="select * from tbl_enquiry";
+$result=mysqli_query($con,$sql);
+echo"<table border=1><tr><td>Enquiry Id</td><td>Name</td><td>Contact No</td><td>Address</td><td>Email</td><td>Enquiry For</td></tr>";
+if (mysqli_num_rows($result) > 0) {
+            while($row = mysqli_fetch_assoc($result)) {
+              $s1= $row["eid"];
+              $s2= $row["ename "];
+			  $s3= $row["contactno"];
+			  $s4=$row["address "];
+			  $s5=$row["emailid "];
+			  $s6=$row["enquiryfor "];
+                        
+				echo"<tr><td>".$s1."</td>";
+				echo"<td>".$s2."</td>"; 
+				echo"<td>".$s3."</td>";
+				echo"<td>".$s4."</td>";
+				echo"<td>".$s5."</td>";
+				echo"<td>".$s6."</td></tr>";
+              
+			}
+            }
+?>
+</table>

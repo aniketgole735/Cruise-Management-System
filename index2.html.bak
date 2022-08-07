@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home </title>
+    <!-- !shortcut icon  -->
+    <!-- <link rel="shortcut icon" href="img/FA/favicon.png"> -->
+    <link rel="shortcut icon" href="img/FA/new.jpg">
+
+
+    <link href="style/index2css.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <!-- <div class="container">
+    
+        <div class="navbar">
+            <img src="/img/avatar.png" alt="" class="logo">
+            <nav class="nav1">
+                <ul>
+                    <li class="active"><a href="#">HOME</a></li>
+                    <li><a href="#">region</a></li>
+                    <li><a href="#">about</a></li>
+                    <li><a href="#">HOME</a></li>
+    
+    
+                </ul>
+            </nav>
+            <img src="/img/avatar.png" alt="" class="menu-icon">
+    
+        </div>
+    
+    </div> -->
+    <div class="container">
+
+        <div class="navbar">
+            <img src="img/logo2.png" alt="" class="logo">
+            <nav class="nav1">
+                <ul>
+                    <li class="active"><a href="index2.html">HOME</a>
+                        <div class="sub-menu-1">
+                            <!-- <ul>
+
+
+                                <li> <a href="#">sub1 </a></li><br><br>
+                                <li> <a href="#">sub2 </a></li><br><br>
+                                <li> <a href="#">sub3</a></li>
+
+
+                            </ul> -->
+
+                        </div>
+                    </li>
+                    <li><a href="enquiry.html">Enquiry</a>
+                        <div class="sub-menu-1">
+                            <!-- <ul>
+
+
+                                <li> <a href="#">sub1</a></li><br><br>
+                                <li> <a href="#">sub2 </a></li><br><br>
+                                <li> <a href="#">sub3</a></li>
+
+
+                            </ul> -->
+
+                        </div>
+
+                    </li>
+                    <li><a href="registration.html">Registeration</a></li>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="Contact-us.html">contact us</a></li>
+        
+                </ul>
+            </nav><a href="login.html">
+                <img src="img/login.png" alt="" class="menu-icon"></a>
+
+        </div>
+        <div class="row">
+            <div class="col">
+                <h1>Blue Delta</h1>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores facere culpa neque illo
+                    architectoLorem ipsum dolor sit amet consectetur adipisicing elit. Dolores facere culpa neque illo
+                    architectoLorem ipsum dolor sit amet consectetur adipisicing elit. Dolores facere culpa neque illo
+                    architecto
+                </p>
+                <button type="button" class="btn btn-1">Explore</button>
+            </div>
+            <div class="col">
+                <div class="card card1">
+                    <a href="cruise_website/login.html">
+                        <h5>Cacino</h5>
+                        <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nostrum minus explicabo doloremque
+                        </p>
+                    </a>
+                </div>
+                <div class="card card2"><a href="cruise_website/login.html">
+                        <h5>Interior Room</h5>
+                        <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nostrum minus explicabo doloremque
+                        </p>
+                    </a>
+                </div>
+                <div class="card card3"><a href="cruise_website/login.html">
+                        <h5>Bar</h5>
+                        <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nostrum minus explicabo doloremque
+                        </p>
+                    </a>
+                </div>
+                <div class="card card4"><a href="cruise_website/login.html">
+                        <h5>Suite</h5>
+                        <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nostrum minus explicabo doloremque
+                        </p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

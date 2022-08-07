@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<head>
+	<title>Cruise Website</title>
+	<meta name="viewport" content="width=device-width">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="css/all.css">
+	<link rel="stylesheet" type="text/css" href="css/all.min.css">
+	<link rel="stylesheet" type="text/css" href="css/lightbox.css">
+	<link rel="stylesheet" type="text/css" href="css/flexslider.css">
+	<link rel="stylesheet" type="text/css" href="css/owl.carousel.css">
+	<link rel="stylesheet" type="text/css" href="css/owl.theme.default.css">
+	<link rel="stylesheet" type="text/css" href="css/jquery.rateyo.css"/>
+	<!-- <link rel="stylesheet" type="text/css" href="css/jquery.mmenu.all.css" /> -->
+	<!-- <link rel="stylesheet" type="text/css" href="css/meanmenu.min.css"> -->
+	<link rel="stylesheet" type="text/css" href="inner-page-style.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link href="https://fonts.googleapis.com/css?family=Raleway:400,500,600,700" rel="stylesheet">
+</head>
+   
+    <script>
+        function check() {
+
+            var ename = document.enquiry.ename.value;
+            var contact_no = document.enquiry.contact_no.value;
+            var address = document.enquiry.address.value;
+            var enquiry_for = document.enquiry.enquiry_for.value;
+            var email = document.enquiry.email.value;
+            // Personal Details
+            if (ename.length == 0)
+                alert('Opps you forgot your Name');
+            else if (!isNaN(ename))
+                alert('cant put number as a name');
+
+
+            else if (contact_no.length == 0)
+                alert('Opps you forgot Mobile number');
+            else if (isNaN(contact_no))
+                alert('Enter Number Only');
+            else if (contact_no <= 7000000000)
+                alert('Opps you Enter Invalid Phone Number');
+
+            else if (address.length == 0)
+                alert('Opps you forgot address');
+            else if (email.length == 0)
+                alert('Opps you forgot email');
+
+
+            else if (enquiry_for.length == 0)
+                alert('Enter Reason for enquiry');
+
+
+            //  // // gardian detailss
+
+
+
+
+            //last (run)
+            else {
+                alert('Thank you for contacting us...');
+                document.enquiry.action = "enquiry.php";
+                document.enquiry.submit();
+
+            }
+
+        }
+
+    </script>
+</head>
+
+<body>
+    <!-- action="enquiry.php" -->
+			
+    <form name="enquiry" method="post">
+<div id="page" class="site" itemscope itemtype="http://schema.org/LocalBusiness">
+		<header class="site-header">
+			<div class="top-header">
+				<div class="container">
+					<div class="top-header-left">
+						<div class="top-header-block">
+							<a href="mailto:info@Cruise Websitepro.com" itemprop="email"><i class="fas fa-envelope"></i> info@Cruise Websitepro.com</a>
+						</div>
+						<div class="top-header-block">
+							<a href="tel:+9779813639131" itemprop="telephone"><i class="fas fa-phone"></i> +977 9813639131</a>
+						</div>
+					</div>
+					<div class="top-header-right">
+						<div class="social-block">
+						
+						</div>
+						<div class="login-block">
+							<a href="">Login /</a>
+							<a href="">Register</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Top header Close -->
+			<div class="main-header">
+				<div class="container">
+					<div class="logo-wrap" itemprop="logo">
+						<img src="images/site-logo.png" alt="Logo Image">
+						<!-- <h1>Cruise Website</h1> -->
+					</div>
+					<div class="nav-wrap">
+						<nav class="nav-desktop">
+							<ul class="menu-list">
+					 <li><a href="index.html"><font color="white">Home</a></li>
+                    <li> <a href="enquiry.html"><font color="white">Enquiry</a></li>
+                     <li><a href="registration.html"><font color="white">Registration</a></li>
+                     <li><a href="login.html"><font color="white">Login</a></li>
+                    <li> <a href="Contact-us.html"><font color="white">contact us</a></li>
+					
+				</ul>
+						</nav>
+						<div id="bar">
+							<i class="fas fa-bars"></i>
+						</div>
+						<div id="close">
+							<i class="fas fa-times"></i>
+						</div>
+					</div>
+				</div>
+			</div>
+				</header>
+<div class="page-heading">
+			<div class="container">		
+			<div class="learn-courses">
+			<div class="container">
+				
+            <h2>Enquiry Form</h2>
+            <table border="1">
+                <tr>
+                    <td><samp>*</samp>Enter Name</td>
+                    <td><input type="text" id="ename" name="t1"></td>
+                </tr>
+                <tr>
+                    <td><samp>*</samp>Enter Contact No</td>
+                    <td><input type="text" id="contact_no" name="t2"></td>
+                </tr>
+                <tr>
+                    <td><samp>*</samp>Enter Address</td>
+                    <td><input type="text" id="address" name="t3"></td>
+                </tr>
+                <tr>
+                    <td><samp>*</samp>Enter Email</td>
+                    <td><input type="email" id="email" name="t4"></td>
+                </tr>
+                <tr>
+                    <td><samp>*</samp>Enquiry For</td>
+                    <td><input type="text" id="enquiry_for" name="t5"></td>
+                </tr>
+                <tr>
+                    <td><input type="submit" id="btn" value="Submit" onclick="check()"></td>
+                    <td><input type="reset" id="btn" name="Clear">
+                    </td>
+                </tr>
+            </table>
+     
+    </form>
+
+</body>

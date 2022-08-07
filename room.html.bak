@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Room Booking</title>
+    <!-- ! favicon -->
+
+    <!-- <link rel="apple-touch-icon" sizes="180x180" href="img/FA/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/FA/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/FA/favicon-16x16.png">
+    <link rel="manifest" href="img/FA/site.webmanifest"> -->
+
+
+    <!-- !shortcut icon  -->
+    <link rel="shortcut icon" href="img/FA/favicon.png">
+
+    <!-- * file links* -->
+    <link rel="stylesheet" href="style/room.css">
+    <link rel="stylesheet" href="style/lightslider.css">
+    <script type="text/javascript" src="js/room_Jquery.js"></script>
+    <script type="text/javascript" src="js/lightslider.js"></script>
+
+
+
+
+
+
+
+
+    <!-- ? G-font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+
+
+</head>
+
+<body>
+    <div class="container">
+        <!-- ! Nav bar -->
+        <div class="navbar">
+            <img src="img/logo2.png" alt="" class="logo">
+            <nav class="nav1">
+                <ul>
+                     <li class="active"><a href="myact.php">HOME</a>
+                        <div class="sub-menu-1">
+                            <!-- <ul>
+
+
+                                <li> <a href="booking.php">sub1 </a></li><br><br>
+                                <li> <a href="#">sub2 </a></li><br><br>
+                                <li> <a href="#">sub3</a></li>
+
+
+                            </ul> -->
+
+                        </div>
+                    </li>
+                    <li><a href="booking.php">Book Cruice</a>
+                        <div class="sub-menu-1">
+                            <!-- <ul>
+
+
+                                <li> <a href="#">sub1</a></li><br><br>
+                                <li> <a href="#">sub2 </a></li><br><br>
+                                <li> <a href="#">sub3</a></li>
+
+
+                            </ul> -->
+
+                        </div>
+
+                    </li>
+                    <li><a href="room.html">Accomodation</a></li>
+                    <li><a href="facilities.html">facilities</a></li>
+                    <li><a href="Contact-us.html">contact us</a></li>
+        
+                </ul>
+            </nav><a href="index2.html">
+                <img src="img/logout.png" alt="" class="menu-icon"></a>
+
+        </div>
+        <!-- ! Nav bar ENDs-->
+
+        <section class="slider">
+
+            <!-- ! slider Starts -->
+            <!-- ? NEXT Ul is taken from "http://sachinchoolur.github.io/lightslider/examples.html" -->
+            <ul id="autoWidth" class="cs-hidden">
+                <!-- * 1st Item * -->
+                <li class="item-a">
+                    <div class="box">
+                        <!-- img-box -->
+                        <div class="slider-img">
+                            <img src="img/room/interior-room.jpg" alt="1">
+                            <!-- 0verlayer -->
+                            <div class="overlayer">
+                                <!-- buy-btn -->
+                                <a href="booking.php" class="buy-btn">Book Now</a>
+
+
+                            </div>
+
+                        </div>
+                        <!-- detail box -->
+                        <div class="detail-box">
+                            <!-- type -->
+                            <div class="type">
+                                <a href="booking.php"> Interior</a>
+                                <span> Best price</span>
+                            </div>
+                            <!-- price -->
+                            <a href="booking.php" class="price"> 10,000/-</a>
+                        </div>
+                    </div>
+                </li>
+                <!-- * 1st Item Ends* -->
+                <li class="item-b">
+                    <!-- * 2ND Item * -->
+
+                    <div class="box">
+                        <!-- img-box -->
+                        <div class="slider-img">
+                            <img src="img/room/oceanview.png" alt="1">
+                            <!-- 0verlayer -->
+                            <div class="overlayer">
+                                <!-- buy-btn -->
+                                <a href="booking.php" class="buy-btn">Book Now</a>
+
+
+                            </div>
+
+                        </div>
+                        <!-- detail box -->
+                        <div class="detail-box">
+                            <!-- type -->
+                            <div class="type">
+                                <a href="booking.php"> Ocean View</a>
+                                <span> Best price</span>
+                            </div>
+                            <!-- price -->
+                            <a href="booking.php" class="price">12000/- </a>
+                        </div>
+                    </div>
+
+                    <!-- * 2 Item Ends* -->
+                </li>
+                <li class="item-c">
+                    <!-- * 3RD Item * -->
+
+                    <div class="box">
+                        <!-- img-box -->
+                        <div class="slider-img">
+                            <img src="img/room/balcony2.jpg" alt="1">
+                            <!-- 0verlayer -->
+                            <div class="overlayer">
+                                <!-- buy-btn -->
+                                <a href="booking.php" class="buy-btn">Book Now</a>
+
+
+                            </div>
+
+                        </div>
+                        <!-- detail box -->
+                        <div class="detail-box">
+                            <!-- type -->
+                            <div class="type">
+                                <a href="booking.php"> Balcony</a>
+                                <span> Best price</span>
+                            </div>
+                            <!-- price -->
+                            <a href="booking.php" class="price">15000/- </a>
+                        </div>
+                    </div>
+
+                    <!-- * 3RD Item Ends* -->
+                </li>
+                <li class="item-d">
+                    <!-- * 4th Item * -->
+
+                    <div class="box">
+                        <!-- img-box -->
+                        <div class="slider-img">
+                            <img src="img/room/suite2.jpg" alt="1">
+                            <!-- 0verlayer -->
+                            <div class="overlayer">
+                                <!-- buy-btn -->
+                                <a href="booking.php" class="buy-btn">Book Now</a>
+
+
+                            </div>
+
+                        </div>
+                        <!-- detail box -->
+                        <div class="detail-box">
+                            <!-- type -->
+                            <div class="type">
+                                <a href="booking.php"> Suite</a>
+                                <span> Best price</span>
+                            </div>
+                            <!-- price -->
+                            <a href="booking.php" class="price">20,000/- </a>
+                        </div>
+                    </div>
+
+                    <!-- * 4th Item Ends* -->
+
+                </li>
+                <!DOCTYPE html>
+                <html lang="en">
+                <head>
+                    <meta charset="UTF-8">
+                    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                    <title>Document</title>
+                </head>
+                <body>
+                    
+                </body>
+                </html>
+                <li class="item-e">
+                    <!-- * 5th Item * -->
+
+                 
+
+                    <!-- * 5th Item Ends* -->
+                </li>
+            </ul>
+
+            <!-- ! slider Ends -->
+        </section>
+        <!-- ?container ENDs -->
+    </div>
+
+
+
+
+    <script type="text/javascript" src="js/room.js"></script>
+</body>
+
+</html>

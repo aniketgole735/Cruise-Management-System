@@ -1,0 +1,241 @@
+<html>
+
+<head>
+    <style>
+        body {
+            font-family: sans-serif;
+    background-image: url(images/1.jpg);
+	background-position: center;
+            background-size: cover;
+            align-items: center;
+        }
+
+        form {
+            padding-top: 50px;
+        }
+
+        table {
+            background: rgba(0, 0, 0, 0.548);
+            color: white;
+            padding: 30px 30px 0px 30px;
+            border: none;
+            position: relative;
+            justify-content: center;
+            font-size: 25px;
+
+        }
+
+        h2 {
+            color: white;
+            font-size: xx-large;
+            text-decoration: underline;
+            text-transform: uppercase;
+        }
+
+        tr,
+        td {
+            border: none;
+            padding: 10px;
+            padding-bottom: 15px;
+        }
+
+        input[type="text"] {
+            border-radius: 5px;
+            border: none;
+            height: 30px;
+            width: 300px;
+            font-size: 20px;
+
+        }
+
+        input[type=text]:focus {
+            background-color: rgba(252, 249, 61, 0.788);
+        }
+
+        input[type="password"] {
+            border-radius: 5px;
+            border: none;
+            height: 30px;
+            width: 300px;
+            font-size: 20px;
+
+        }
+
+        input[type=password]:focus {
+            background-color: rgba(252, 249, 61, 0.788);
+        }
+
+        input[type="email"] {
+            border-radius: 5px;
+            border: none;
+            height: 30px;
+            width: 300px;
+            font-size: 20px;
+
+        }
+
+        input[type=email]:focus {
+            background-color: rgba(252, 249, 61, 0.788);
+        }
+
+        #btn {
+            /* height: 40px; */
+            font-weight: 400;
+            text-align: center;
+            border: 1px solid transparent;
+            padding: .375rem .75rem;
+            font-size: 1rem;
+            line-height: 1.5;
+            border-radius: .25rem;
+            background-color: #007bff;
+            color: #fff;
+            transition: 0.8s;
+            width: 100%;
+        }
+
+        #btn:hover {
+            background-color: #fff;
+            color: #007bff;
+        }
+
+        select {
+            border-radius: 5px;
+            height: 30px;
+            width: 300px;
+        }
+
+        .new-user {
+            text-decoration: none;
+            color: red;
+            font-size: x-large;
+            background-color: rgba(0, 0, 0, 0.548);
+            padding: 0px 238.5px;
+            padding-bottom: 10px;
+            border-top: 1px solid white;
+            transition: 1s;
+        }
+
+        .new-user:hover {
+            color: white;
+            font-size: x-large;
+            background-color: rgba(0, 0, 0, 0.548);
+            padding: 0px 238px;
+            padding-bottom: 10px;
+
+        }
+
+        samp {
+            color: red;
+        }
+    </style>
+    <script>
+        function check() {
+
+            var name = document.stud_reg.name.value;
+            var mno = document.stud_reg.mno.value;
+            var Address = document.stud_reg.Address.value;
+            var uname = document.stud_reg.uname.value;
+            var upassword = document.stud_reg.upassword.value;
+
+
+            // var no_adult = document.f1.no_adult.value;
+            // var no_child = document.f1.no_child.value;
+
+            // var Aadhar_Number = document.f1.Aadhar_Number.value;
+            // var pin_code = document.f1.pin_code.value;
+
+
+
+            // alert('Opps you forgot your First Name');
+
+
+            // Personal Details
+            if (name.length == 0)
+                alert('Opps you forgot your Name');
+            else if (!isNaN(name))
+                alert('cant put number as a name');
+
+
+            else if (mno.length == 0)
+                alert('Opps you forgot Mobile number');
+            else if (email.length == 0)
+                alert('Opps you forgot email');
+            else if (isNaN(mno))
+                alert('Enter Number Only');
+            else if (mno <= 7000000000)
+                alert('Opps you Enter Invalid Phone Number');
+
+            else if (Address.length == 0)
+                alert('Opps you forgot Address');
+
+            else if (uname.length == 0)
+                alert('Opps you forgot User Name');
+
+            else if (upassword.length == 0)
+                alert('Opps you forgot Password');
+            //  // // gardian detailss
+
+
+
+
+            //last (run)
+            else {
+                alert('All Validation verified');
+                document.stud_reg.action = "Save_Reg.php";
+                document.stud_reg.submit();
+
+            }
+
+        }
+
+    </script>
+</head>
+
+<body>
+    <form name="stud_reg" method="post">
+        <center>
+		 <center>
+	<font color="white">
+					<a href="index.html"><font color="white">Home</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="enquiry.html"><font color="white">Enquiry</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="registration.html"><font color="white">Registration</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="login.html"><font color="white">Login</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="Contact-us.html"><font color="white">contact us</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					</font>
+							
+            <h2>Registration Form</h2>
+            <table border="1">
+                <tr>
+                    <td><samp>*</samp>Enter Name</td>
+                    <td><input type="text" id="name" name="t1" autocomplete="off"></td>
+                </tr>
+                <tr>
+                    <td><samp>*</samp>Enter Mobile no</td>
+                    <td><input type="text" id="mno" name="t2" maxlength="10" autocomplete="off"></td>
+                </tr>
+                <tr>
+                    <td><samp>*</samp>Enter Address</td>
+                    <td><input type="text" id="Address" name="t3" autocomplete="off"></td>
+                </tr>
+                <tr>
+                    <td><samp>*</samp>Enter Email</td>
+                    <td><input type="email" id="email" name="t4" required autocomplete="off"></td>
+                </tr>
+                <tr>
+                    <td><samp>*</samp>Enter username</td>
+                    <td><input type="text" id="uname" name="t5" autocomplete="off"></td>
+                </tr>
+                <tr>
+                    <td><samp>*</samp>Enter password</td>
+                    <td><input type="password" id="upassword" name="t6" autocomplete="off"></td>
+                </tr>
+                <tr>
+                    <td><input type="submit" id="btn" value="Submit" onclick="check()"></td>
+                    <td>
+                        <input type="reset" id="btn" name="Clear">
+                    </td>
+                </tr>
+            </table>
+        </center>
+    </form>
+</body>

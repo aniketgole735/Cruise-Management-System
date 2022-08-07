@@ -1,0 +1,16 @@
+<html>
+<body>
+<h1>Welcome Admin</h1>
+<ul>
+<li><a href="Admin.html">Admin Home</a><br></li>
+<li><a href="Cruise.html">Add new Cruise</a><br></li>
+
+<li><a href="Accomodation.html">Add new Accomodation</a></br></li>
+<li><a href="ShowCruise.php">Show  Cruise</a><br></li>
+<li><a href="ShowCancellation.php">Show  cancellation</a><br></li>
+<li><a href="refund.php">Update Refund</a><br></li>
+<li><a href="CruiseSeatReport.php">Show Cruisewise Seat Details</a><br></li>
+<li><a href="Reports.html">Reports</a><br>
+<li><a href="login.html">Logout</a><br>	
+</ul>
+</body>

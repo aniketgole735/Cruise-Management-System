@@ -1,0 +1,38 @@
+<form name="frmlogin" action="ShowCruise.php" method="post">
+<ul>
+<li><a href="Cruise.html">Add new Cruise</a><br></li>
+<li><a href="ShowCruise.php">Show  Cruise</a><br></li>
+<li><a href="Accomodation.html">Add new Cruise</a></br></li>
+<li><a href="ShowCruise.php">Show  Cruise</a><br></li>
+<li><a href="Show_cancelation.php">Show  Cancellation</a><br></li>
+<li><a href="refund.php">Update Refund</a><br></li>
+<li><a href="Reports.html">Reports</a><br></li>
+<li><a href="login.html">Logout</a><br></li>
+</ul>
+<center>
+<h2>Cruise  Details</h2>
+            
+<?php
+$search=$_POST['txtsearch'];
+echo "data for dearch" .$search;
+$s='%'.''+$search+''.'%';
+echo $s;
+    $con = mysqli_connect("localhost","root","","cruise_database");
+$sql="select * from tbl_cruise where cruisename like '$s'";
+$result=mysqli_query($con,$sql);
+echo"<table border=1><tr><td>Cruise Id</td><td>cruisename</td><td>cruise_arrival</td><td>cruise_dest</td><td>cruise_dest</td><td>cruise_date</td><td>cruise_total</td><td>cruise_other</td></tr>";
+
+if (mysqli_num_rows($result) > 0) {
+            while($row = mysqli_fetch_assoc($result)) {
+            
+              
+              }
+            }
+?>
+</table>
+
+</form>
+<br>
+<a href=".php"></a><br><br>
+<a href="category.php"></a>
+</center>

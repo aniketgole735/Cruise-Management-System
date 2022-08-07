@@ -1,0 +1,197 @@
+<html>
+    <head>
+        <style>
+            body {
+                font-family: sans-serif;
+                background-image: url(img/1.jpg);
+                background-position: center;
+                background-size: cover;
+                align-items: center;
+            }
+    
+            form {
+                padding-top: 50px;
+            }
+    
+            table {
+                background: rgba(0, 0, 0, 0.548);
+                color: white;
+                padding: 30px 30px 0px 30px;
+                border: none;
+                position: relative;
+                justify-content: center;
+                font-size: 25px;
+    
+            }
+    
+            h2 {
+                color: white;
+                font-size: xx-large;
+                text-decoration: underline;
+                text-transform: uppercase;
+            }
+    
+            tr,
+            td {
+                border: none;
+                padding: 10px;
+                padding-bottom: 15px;
+            }
+    
+            input[type="text"] {
+                border-radius: 5px;
+                border: none;
+                height: 30px;
+                width: 300px;
+                font-size: 20px;
+    
+            }
+    
+            input[type=text]:focus {
+                background-color: rgba(252, 249, 61, 0.788);
+            }
+    
+            input[type="password"] {
+                border-radius: 5px;
+                border: none;
+                height: 30px;
+                width: 300px;
+                font-size: 20px;
+    
+            }
+            input[type="date"] {
+                border-radius: 5px;
+                border: none;
+                height: 30px;
+                width: 300px;
+                font-size: 20px;
+    
+            }
+            input[type=password]:focus {
+                background-color: rgba(252, 249, 61, 0.788);
+            }
+    
+            input[type="email"] {
+                border-radius: 5px;
+                border: none;
+                height: 30px;
+                width: 300px;
+                font-size: 20px;
+    
+            }
+    
+            input[type=email]:focus {
+                background-color: rgba(252, 249, 61, 0.788);
+            }
+    
+            #btn {
+                /* height: 40px; */
+                font-weight: 400;
+                text-align: center;
+                border: 1px solid transparent;
+                padding: .375rem .75rem;
+                font-size: 1rem;
+                line-height: 1.5;
+                border-radius: .25rem;
+                background-color: #007bff;
+                color: #fff;
+                transition: 0.8s;
+                width: 100%;
+            }
+    
+            #btn:hover {
+                background-color: #fff;
+                color: #007bff;
+            }
+    
+            select {
+                border-radius: 5px;
+                height: 30px;
+                width: 300px;
+            }
+    
+            .new-user {
+                text-decoration: none;
+                color: red;
+                font-size: x-large;
+                background-color: rgba(0, 0, 0, 0.548);
+                padding: 0px 238.5px;
+                padding-bottom: 10px;
+                border-top: 1px solid white;
+                transition: 1s;
+            }
+    
+            .new-user:hover {
+                color: white;
+                font-size: x-large;
+                background-color: rgba(0, 0, 0, 0.548);
+                padding: 0px 238px;
+                padding-bottom: 10px;
+    
+            }
+    
+            samp {
+                color: red;
+            }
+        </style>
+        <link rel="stylesheet" href="style/index2css.css">
+    </head>
+<body>
+    <div class="container">
+<form name="cruise" action="Save_cruise.php" method="post">
+	<!-- <ul>
+<li><a href="Admin.html">Admin Home</a><br></li>
+<li><a href="Cruise.html">Add new Cruise</a><br></li>
+<li><a href="ShowCruise.php">Show  Cruise</a><br></li>
+<li><a href="Accomodation.html">Add new Accomodation</a></br></li>
+<li><a href="ShowCruise.php">Show  Cruise</a><br></li>
+<li><a href="ShowCancellation.php">Show  Cancellation</a><br></li>
+<li><a href="refund.php">Update Refund</a><br></li>
+<li><a href="Reports.html">Reports</a><br>
+<li><a href="login.html">Logout</a><br>	
+</ul> -->
+
+    <div class="navbar">
+        <a href="Admin.html"> <img src="img/logo2.png" alt="" class="logo"></a>
+        <nav class="nav1">
+            <ul>
+                <li class="active"><a href="Cruise.html">New Cruise</a>
+                    <!-- <div class="sub-menu-1">
+                        <ul>
+                            <li> <a href="ShowCruise.php">Cruise  </a></li><br><br>
+                            <li> <a href="ShowCancellation.php">Cancellation  </a></li><br><br>
+                            <li> <a href="#">sub3</a></li>
+                        </ul>
+                    </div> -->
+                </li>
+                <li><a href="Accomodation.html">Accomodation</a></li>
+                <li><a href="ShowCruise.php">Show Cruise</a></li>
+                <li><a href="Show_cancel.php">Cancellation</a></li>
+                <li><a href="refund.php">Refund</a></li>
+                <li><a href="CruiseSeatReport.php">CruiseWiseseat Details</a></li>
+                <li><a href="Reports.html">REPORTS</a></li>
+                <!-- <li><a href="Cancellation.php">Cruise cancel Form</a></li> -->
+            </ul>
+        </nav><a href="login.html">
+            <img src="img/logout.png" alt="" class="menu-icon"></a>
+
+    </div>      
+
+<center>
+    <h2>Cruise Form</h2>
+<table border="1">
+<tr><td>Enter Cruise Name</td><td><input type="text" name="t1"></td></tr>
+<tr><td>Enter Arrival </td><td><input type="text" name="t2"></td></tr>
+<tr><td>Enter Departure</td><td><input type="text" name="t3"></td></tr>
+<tr><td>Enter Cruise Date</td><td><input type="text" name="t4"></td></tr>
+<tr><td>Enter Duration</td><td><input type="text" name="t5"></td></tr>
+<tr><td>Enter Ticket Amount</td><td><input type="text" name="t6"></td></tr>
+<tr><td>Enter Total Seats</td><td><input type="text" name="t7"></td></tr>
+
+<tr><td><input type="submit" id="btn" value="Submit"></td><td>
+<input type="reset" id="btn" name="Clear"></td></tr>
+</table>
+</center>
+</form>
+</div>
+</body>
